@@ -94,7 +94,7 @@ if [ "$choice" == "y" ] || [ "$choice" == "Y" ]; then
     if [ "$server_location" == "y" ] || [ "$server_location" == "Y" ]; then
         wget https://mirror.ghproxy.com/https://raw.githubusercontent.com/zhuchunshu/SForum/master/docker-compose.yml
     else
-        wget https://mirror.ghproxy.com/https://raw.githubusercontent.com/zhuchunshu/SForum/master/docker-compose.yml
+        https://raw.githubusercontent.com/zhuchunshu/SForum/master/docker-compose.yml
     fi
     # 修改docker-compose.yml文件，将端口映射替换为新生成的随机端口号
     sed -i "s/- \"9501:9501/- \"${random_port}:9501/g" docker-compose.yml
